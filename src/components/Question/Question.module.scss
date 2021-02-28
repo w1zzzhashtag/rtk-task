@@ -1,0 +1,35 @@
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 350px;
+  border-radius: 1em 1em 0 0;
+  border: 1px solid #e1e1e1;
+}
+
+.title {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 18px 30px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.inner {
+  width: 100%;
+  padding: 18px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.subtitle {
+  width: 100%;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
