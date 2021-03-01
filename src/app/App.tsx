@@ -16,7 +16,7 @@ const App: React.FC = () => {
   const [totalSteps, setTotalSteps] = React.useState(0)
 
   React.useEffect(() => setQuestionOnCurrentStep(data[currentStep]), [data, currentStep])
-  React.useEffect(() => setTotalSteps(Object.keys(data).length + 1), [data])
+  React.useEffect(() => setTotalSteps(Object.keys(data).length), [data])
 
   const nextStepIsNotAvailable = () => (questionOnCurrentStep.options.every(item => !item.checked))
 
@@ -31,7 +31,7 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <div className="container">
-        {currentStep === totalSteps
+        {currentStep > totalSteps
           ? <Result />
           : questionOnCurrentStep && <>
             <Question
